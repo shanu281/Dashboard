@@ -1,0 +1,31 @@
+.flex-1{
+    display: flex;
+    flex-direction: column;
+}
+nav{
+    width: 18vw;
+    height: 100vw;
+    background-color: rgb(248, 246, 245);
+    position: absolute;
+    left: 0;
+    top: 74px;
+}
+
+a{
+    width: 100%;
+    font-size: 1.5rem;
+    padding: 1rem;
+    line-height: 1.8;
+    text-decoration: none;
+   
+}
+a:hover{
+    background-color: aliceblue;
+}
+li{
+    background-color: aqua;
+}
+.fa-solid{
+    margin-right: 1rem;
+    color: black;
+}

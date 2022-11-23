@@ -7,6 +7,7 @@ import Articles from "../Articles";
 import People from "../People";
 import Books from "../Books";
 import Help from "../Help";
+import Article from "../Article";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 class App extends react.Component {
@@ -31,6 +32,14 @@ class App extends react.Component {
                             <Route
                                 element={<Articles />}
                                 path="/articles"
+                                exact
+                            />,
+                            
+                             <Route
+                                element={<Article/> }
+                                path="/articles/:slug"
+                            
+                               
                             />,
 
                             <Route

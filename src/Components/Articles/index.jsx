@@ -5,17 +5,32 @@ import { NavLink } from "react-router-dom";
 class Articles extends react.Component {
     constructor(props) {
         super(props)
+        this.state = {
+            searchValue : ""
+        }
+    }
+   
+handleSearch = ({ target: { value } }) => {
+    this.setState({ searchValue: value });
+  
     }
     render() {
-        console.log(articles)
+        let filteredArticles = articles.filter((article) =>
+      article.title.toLowerCase().includes(this.state.searchValue)
+    );
+        console.log(filteredArticles)
         return (
             <>
-                <input type="search" placeholder="Search.." />
+                <input 
+                onChange={this.handleSearch}
+                value={this.state.searchValue} 
+                type="search" 
+                placeholder="Search.." />
 
                 {
-                    articles.map((article, i) =>
-                        <div className="article-container">
-                            <NavLink to="/articles/i" className={({ isActive }) =>
+                    filteredArticles.map((article) =>
+                        <div className="article-container" key={article.slug}>
+                            <NavLink to={`/articles/${article.slug}`} className={({ isActive }) =>
                                 isActive ? "activeNav" : undefined
                             }>  {article.title}
                             </NavLink>

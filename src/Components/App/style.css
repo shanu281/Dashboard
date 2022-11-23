@@ -4,11 +4,12 @@
 
 }
 .aside-section{
-    width: 18vw;
+    width: 17vw;
     background-color: aliceblue;
    
 }
 .hero-section{
-    width: 82vw;
+    width: 80vw;
+    padding:  2rem;
    
 }

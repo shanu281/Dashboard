@@ -1,6 +1,7 @@
 import react from "react";
 import "./style.css"
 import articles from "../Data/Data";
+import { NavLink } from "react-router-dom";
 class Articles extends react.Component {
     constructor(props) {
         super(props)
@@ -12,10 +13,15 @@ class Articles extends react.Component {
                 <input type="search" placeholder="Search.." />
 
                 {
-                    articles.map(article =>
+                    articles.map((article, i) =>
                         <div className="article-container">
-                            <h2>{article.title}</h2>
+                            <NavLink to="/articles/i" className={({ isActive }) =>
+                                isActive ? "activeNav" : undefined
+                            }>  {article.title}
+                            </NavLink>
                             <p className="author">{article.author}</p>
+                           
+                           
                         </div>
 
                     )

@@ -2,22 +2,18 @@ import react from "react";
 import "./style.css"
 import Aside from "../Aside";
 import Header from "../Header";
-import Hero from "../Hero";
+import Home from "../Home"
 import Articles from "../Articles";
 import People from "../People";
 import Books from "../Books";
-import { BrowserRouter, Route ,Routes} from "react-router-dom";
+import Help from "../Help";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 class App extends react.Component {
     constructor(props) {
         super(props)
-        this.state = {
-            active: "",
-            homePage: ""
-        }
-    }
 
-   
+    }
     render() {
         return (
             <>
@@ -26,25 +22,42 @@ class App extends react.Component {
                     <div className="aside-section"> <Aside /></div>
                     <div className="hero-section">
 
-                        {/* <Routes>
-                            <Route path='/hero' >
-                                <Hero />
-                            </Route>
+                        <Routes>
+                            <Route
+                                element={<Home />}
+                                path="/home"
+                            />,
 
-                            <Route path='/articles' >
-                                <Articles />
-                            </Route>
+                            <Route
+                                element={<Articles />}
+                                path="/articles"
+                            />,
 
-                            <Route path='/people'>
-                                <People />
-                            </Route>
+                            <Route
+                                element={<People />}
+                                path="/people"
+                            />,
 
-                            <Route path='/books' >
-                                <Books />
-                            </Route>
-                        </Routes> */}
+                            <Route
+                                element={<Books />}
+                                path="/books"
+                            />
 
-                      
+                            <Route
+                                element={<Help />}
+                                path="/Help"
+                            />
+
+                            <Route
+                                element={<Home />}
+                                path="/ "
+                            />
+
+                        </Routes>
+
+
+
+
 
 
                     </div>

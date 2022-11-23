@@ -12,19 +12,23 @@ class Aside extends react.Component {
                 <div className="flex-1">
                     <NavLink to="/home" className={({ isActive }) =>
                         isActive ? "activeNav" : undefined
-                    }><li>Home</li></NavLink>
+                    }><li className="li-2">Home</li></NavLink>
+                   
                     <NavLink to="/articles" className={({ isActive }) =>
                         isActive ? "activeNav" : undefined
-                    } ><li>Articles</li></NavLink>
+                    } ><li  className="li-2">Articles</li></NavLink>
+                   
                     <NavLink to="/people" className={({ isActive }) =>
                         isActive ? "activeNav" : undefined
-                    } ><li>People</li></NavLink>
+                    } ><li className="li-2">People</li></NavLink>
+                  
                     <NavLink to="/books" className={({ isActive }) =>
                         isActive ? "activeNav" : undefined
-                    }><li>Books</li></NavLink>
+                    }><li className="li-2">Books</li></NavLink>
+                   
                     <NavLink to="/help" className={({ isActive }) =>
                         isActive ? "activeNav" : undefined
-                    } ><li>Help</li></NavLink>
+                    } ><li className="li-2">Help</li></NavLink>
 
                 </div>
             </>

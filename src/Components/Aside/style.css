@@ -1,14 +1,13 @@
 .flex-1{
     display: flex;
     flex-direction: column;
+    margin-left: -1rem;
+    margin-right: 2rem;
 }
 nav{
-    width: 18vw;
-    height: 100vw;
+   
     background-color: rgb(248, 246, 245);
-    position: absolute;
-    left: 0;
-    top: 74px;
+   
 }
 
 a{
@@ -22,10 +21,22 @@ a{
 a:hover{
     background-color: aliceblue;
 }
-li{
-    background-color: aqua;
-}
+
 .fa-solid{
     margin-right: 1rem;
     color: black;
+}
+.activeNav{
+
+    color: red;
+}
+
+li {
+    width: 100%;
+    list-style: none;
+    margin: 0rem;
+    padding: 0.5rem;
+    box-shadow: 0 1px 4px black;
+    text-align: center;
+    background-color: #72c5e0;
 }

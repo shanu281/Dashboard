@@ -1,0 +1,14 @@
+.main{
+    display: flex;
+    
+
+}
+.aside-section{
+    width: 18vw;
+    background-color: aliceblue;
+   
+}
+.hero-section{
+    width: 82vw;
+   
+}

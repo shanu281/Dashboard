@@ -4,7 +4,7 @@ function Hero(props){
     return(
         <>
         <div>
-        <Home/>
+        <Home />
 
         </div>
         </>

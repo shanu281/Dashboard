@@ -62,10 +62,10 @@ button {
   p{
     margin: 1rem 0rem;
   }
-  .active{
+  /* .active{
     background: white;
-    color: black;
-  }
+    color: red;
+  } */
   .tags-display{
     display: flex;
     justify-content: center;

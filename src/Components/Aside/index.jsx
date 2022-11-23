@@ -1,5 +1,6 @@
 import react from "react";
-import "./style.css"
+import "./style.css";
+import { NavLink } from "react-router-dom";
 
 class Aside extends react.Component {
     constructor(props) {
@@ -8,14 +9,24 @@ class Aside extends react.Component {
     render() {
         return (
             <>
-                <nav className="flex-1">
+                <div className="flex-1">
+                    <NavLink to="/home" className={({ isActive }) =>
+                        isActive ? "activeNav" : undefined
+                    }><li>Home</li></NavLink>
+                    <NavLink to="/articles" className={({ isActive }) =>
+                        isActive ? "activeNav" : undefined
+                    } ><li>Articles</li></NavLink>
+                    <NavLink to="/people" className={({ isActive }) =>
+                        isActive ? "activeNav" : undefined
+                    } ><li>People</li></NavLink>
+                    <NavLink to="/books" className={({ isActive }) =>
+                        isActive ? "activeNav" : undefined
+                    }><li>Books</li></NavLink>
+                    <NavLink to="/help" className={({ isActive }) =>
+                        isActive ? "activeNav" : undefined
+                    } ><li>Help</li></NavLink>
 
-                    <l1><a href="#"><i class="fa-sharp fa-solid fa-house"></i>  Home</a> </l1>
-                    <l1><a href=""><i class="fa-solid fa-a"></i>  Article</a> </l1>
-                    <l1><a href=""><i class="fa-sharp fa-solid fa-user-group"></i>People</a></l1>
-                    <l1><a href=""><i class="fa-sharp fa-solid fa-book"></i>Books</a></l1>
-                    <l1><a href=""><i class="fa-solid fa-phone-volume"></i>Help & Support</a> </l1>
-                </nav>
+                </div>
             </>
         )
     }

@@ -5,10 +5,11 @@ import Header from "../Header";
 import Home from "../Home"
 import Articles from "../Articles";
 import People from "../People";
-import Books from "../Books";
+
 import Help from "../Help";
 import Article from "../Article";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import EnhancedBookSearch from "../Books";
 
 class App extends react.Component {
     constructor(props) {
@@ -48,7 +49,7 @@ class App extends react.Component {
                             />,
 
                             <Route
-                                element={<Books />}
+                                element={<EnhancedBookSearch />}
                                 path="/books"
                             />
 
